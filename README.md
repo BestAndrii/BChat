@@ -7,4 +7,4 @@
  - python3 main.py
 
 # Демонстрация работы
-<img src="ПО.png", width="500px">
+<img src="ПО.png" width="500px">
