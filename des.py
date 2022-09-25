@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui.ui'
+# Form implementation generated from reading ui file 'untitled.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.7
 #
@@ -11,80 +11,88 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Interface(object):
-    def setupUi(self, Window):
-        Window.setObjectName("Window")
-        Window.resize(500, 400)
-        Window.setStyleSheet("QPushButton {\n"
-                             "    border-radius: 15px;\n"
-                             "    background-color: rgb(184, 186, 186);\n"
-                             "    \n"
-                             "}\n"
-                             "\n"
-                             "QPushButton::hover {\n"
-                             "    background-color: rgb(215, 218, 218);\n"
-                             "}\n"
-                             "\n"
-                             "QLineEdit {\n"
-                             "    border-radius: 15px;\n"
-                             "    padding-left: 10px;\n"
-                             "}\n"
-                             "\n"
-                             "QTextBrowser {\n"
-                             "    border-radius: 15px;\n"
-                             "    background-color: rgb(217, 220, 220);\n"
-                             "}")
-        self.centralwidget = QtWidgets.QWidget(Window)
+class UiMainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(500, 400)
+        MainWindow.setStyleSheet("QPushButton {\n"
+"    border-radius: 15px;\n"
+"    background-color: rgb(228, 255, 230);\n"
+"}\n"
+"\n"
+"QPushButton::hover {\n"
+"    background-color: rgb(230, 243, 222);\n"
+"}\n"
+"\n"
+"QLineEdit {\n"
+"    background-color: rgb(234, 255, 255);\n"
+"    border-radius: 15px;\n"
+"    padding-left: 10px;\n"
+"}\n"
+"\n"
+"QLineEdit::hover {\n"
+"    background-color: rgb(222, 254, 255);\n"
+"}\n"
+"\n"
+"QTextBrowser {\n"
+"    border-radius: 15px;\n"
+"    background-color: gray;\n"
+"}\n"
+"\n")
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 500, 381))
-        self.tabWidget.setStyleSheet("")
+        self.tabWidget.setGeometry(QtCore.QRect(10, 10, 481, 381))
         self.tabWidget.setObjectName("tabWidget")
-        self.Chat = QtWidgets.QWidget()
-        self.Chat.setObjectName("Chat")
-        self.Message = QtWidgets.QLineEdit(self.Chat)
-        self.Message.setGeometry(QtCore.QRect(15, 170, 445, 41))
-        self.Message.setObjectName("Message")
-        self.Send = QtWidgets.QPushButton(self.Chat)
-        self.Send.setEnabled(True)
-        self.Send.setGeometry(QtCore.QRect(2, 231, 471, 51))
-        self.Send.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.Send.setCheckable(True)
-        self.Send.setObjectName("Send")
-        self.Connect = QtWidgets.QPushButton(self.Chat)
-        self.Connect.setGeometry(QtCore.QRect(2, 290, 471, 51))
-        self.Connect.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.Connect.setObjectName("Connect")
-        self.Information = QtWidgets.QTextBrowser(self.Chat)
-        self.Information.setGeometry(QtCore.QRect(15, 20, 445, 121))
-        self.Information.setObjectName("Information")
-        self.tabWidget.addTab(self.Chat, "")
-        self.Settings = QtWidgets.QWidget()
-        self.Settings.setObjectName("Settings")
-        self.lineEdit = QtWidgets.QLineEdit(self.Settings)
-        self.lineEdit.setGeometry(QtCore.QRect(5, 70, 460, 51))
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.textBrowser = QtWidgets.QTextBrowser(self.tab)
+        self.textBrowser.setGeometry(QtCore.QRect(10, 10, 451, 131))
+        font = QtGui.QFont()
+        font.setPointSize(15)
+        self.textBrowser.setFont(font)
+        self.textBrowser.setObjectName("textBrowser")
+        self.lineEdit = QtWidgets.QLineEdit(self.tab)
+        self.lineEdit.setGeometry(QtCore.QRect(10, 170, 451, 51))
         self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.Settings)
-        self.lineEdit_2.setGeometry(QtCore.QRect(5, 140, 460, 51))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.pushButton = QtWidgets.QPushButton(self.Settings)
-        self.pushButton.setGeometry(QtCore.QRect(5, 230, 460, 51))
+        self.pushButton = QtWidgets.QPushButton(self.tab)
+        self.pushButton.setGeometry(QtCore.QRect(10, 240, 451, 81))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
-        self.tabWidget.addTab(self.Settings, "")
-        Window.setCentralWidget(self.centralwidget)
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.pushButton_2 = QtWidgets.QPushButton(self.tab_2)
+        self.pushButton_2.setGeometry(QtCore.QRect(70, 180, 341, 71))
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.tab_2)
+        self.lineEdit_2.setGeometry(QtCore.QRect(70, 20, 341, 31))
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.tab_2)
+        self.lineEdit_3.setGeometry(QtCore.QRect(70, 60, 341, 31))
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.tab_2)
+        self.lineEdit_4.setGeometry(QtCore.QRect(70, 100, 341, 31))
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.tabWidget.addTab(self.tab_2, "")
+        MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(Window)
-        self.tabWidget.setCurrentIndex(0)
-        QtCore.QMetaObject.connectSlotsByName(Window)
+        self.retranslateUi(MainWindow)
+        self.tabWidget.setCurrentIndex(1)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, Window):
+    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        Window.setWindowTitle(_translate("Window", "AkChat"))
-        self.Message.setPlaceholderText(_translate("Window", "Введите свое сообщение сюда"))
-        self.Send.setText(_translate("Window", "Отправить"))
-        self.Connect.setText(_translate("Window", "Подключится"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Chat), _translate("Window", "Чат"))
-        self.lineEdit.setPlaceholderText(_translate("Window", "Адресс сервера"))
-        self.lineEdit_2.setPlaceholderText(_translate("Window", "Порт сервера"))
-        self.pushButton.setText(_translate("Window", "Сохранить"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.Settings), _translate("Window", "Настройки"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "AkChat"))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "Введите ваше сообщение"))
+        self.pushButton.setText(_translate("MainWindow", "Отправить"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "Чат"))
+        self.pushButton_2.setText(_translate("MainWindow", "Подключиться"))
+        self.lineEdit_2.setPlaceholderText(_translate("MainWindow", "IP"))
+        self.lineEdit_3.setPlaceholderText(_translate("MainWindow", "ПОРТ"))
+        self.lineEdit_4.setPlaceholderText(_translate("MainWindow", "ИМЯ"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "Настройки"))
