@@ -76,14 +76,13 @@ class Window(QMainWindow):
     def send_message(self):
         message = self.ui.lineEdit.text()
 
-        if message:
-            self.client.send(message.encode("utf-32"))
+        self.client.send(message.encode("utf-32"))
 
-            message = f"{self.name} [Вы]: {message}"
+        message = f"{self.name} [Вы]: {message}"
 
-            # Выводим наше сообщение в панели
-            self.ui.textBrowser.append(message)
-            self.ui.textBrowser_2.append(message)
+        # Выводим наше сообщение в панели
+        self.ui.textBrowser.append(message)
+        self.ui.textBrowser_2.append(message)
 
     # Подключение к серверу
     def connect_to_server(self):

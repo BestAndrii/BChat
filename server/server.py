@@ -18,7 +18,7 @@ class Server:
         self.new_user()
 
     # Отправка сообщения всем пользовалелям
-    def send_message(self, client_socket, message):
+    def send_message(self, client_socket, message: str):
         for client in self.all_clients:
             if client != client_socket:
                 client.send(message.encode("utf-32"))
@@ -53,7 +53,8 @@ class Server:
                 self.send_message(client_socket, f"{nik} покинул чат!")
                 break
 
-            self.send_message(client_socket, f"{nik}: {data}")
+            message = f"{nik}: " + data.decode("utf-32")
+            self.send_message(client_socket, message)
 
 
 if __name__ == "__main__":
