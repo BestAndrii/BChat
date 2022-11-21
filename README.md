@@ -3,7 +3,7 @@
 
 # Установка и запуск
   - Скачиваем Python 3.8.2, и не ниже (если не установлен)
-  - git clone https://github.com/Ak-Ukraine.git
+  - git clone https://github.com/BestProg0/BChat
   - Открываем папку с проектом
   - pip3 install pyqt5 (если не установлена библиотека PyQt5)
   - python3 server/server.py
